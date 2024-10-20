@@ -30,9 +30,19 @@ Once you've filled in the code, you can open the HTML file in a web browser and 
       // Fill in the code here to check if the number is a prime number using boolean logic.
       // A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
       // Return true if the number is prime, and false otherwise.
-
+ if (number < 2) {
+        return false;
+      }
+    
       // Your code goes here:
-
+ for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
     }
 
     function checkPrimeNumber() {
